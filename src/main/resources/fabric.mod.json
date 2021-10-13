@@ -1,29 +1,32 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "mott",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "McOnTongueTip Mod",
+  "description": "This is a food mod about minecraft",
   "authors": [
-    "Me!"
+    "o2072108706"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/1798643961/McOnTongueTip/",
+    "sources": "https://github.com/1798643961/McOnTongueTip"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0",
+  "icon": "assets/mott/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.mott.ModMain"
+    ],
+    "client": [
+      "com.mott.ClientModMain"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mott.mixins.json"
   ],
 
   "depends": {
