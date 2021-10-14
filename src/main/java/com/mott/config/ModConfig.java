@@ -12,4 +12,7 @@ public class ModConfig {
 
     @Config(config = "common", category = "common", key = "moonSlimeSpawn", comment = "Enable or Disable to let Moon Slime Spawn")
     public static boolean moonSlimeSpawn = true;
+
+    @Config(config = "common", category = "common", key = "waterSlimeSpawn", comment = "Enable or Disable to let Water Slime Spawn")
+    public static boolean waterSlimeSpawn = true;
 }

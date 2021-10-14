@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "particle": "mott:block/rice_crop_stage_3",
+        "cross": "mott:block/rice_crop_stage_3"
+    }
+}

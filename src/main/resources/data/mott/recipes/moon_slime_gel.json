@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mott:moon_slime_ball"
+  },
+  "result": "mott:moon_slime_gel",
+  "experience": 0.35,
+  "cookingtime": 200
+}

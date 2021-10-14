@@ -1,5 +1,6 @@
 package com.mott.mixin;
 
+import com.mott.config.ModConfig;
 import com.mott.listener.EntityListener;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.SpawnSettings;
@@ -14,11 +15,15 @@ public class WaterSlimeSpawnMixin {
 
     @Inject(method = "addOceanMobs", at =@At("RETURN"))
     private static void addWaterSlimeOceanSpawn(SpawnSettings.Builder builder, int squidWeight, int squidMaxGroupSize, int codWeight, CallbackInfo ci) {
-        builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 60, 1, 4));
+        if (ModConfig.waterSlimeSpawn) {
+            builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 60, 1, 4));
+        }
     }
 
     @Inject(method = "addWarmOceanMobs", at =@At("RETURN"))
     private static void addWaterSlimeWarmOceanSpawn(SpawnSettings.Builder builder, int squidWeight, int squidMinGroupSize, CallbackInfo ci) {
-        builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 60, 1, 4));
+        if (ModConfig.waterSlimeSpawn) {
+            builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 60, 1, 4));
+        }
     }
 }

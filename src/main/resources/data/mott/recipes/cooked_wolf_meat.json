@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mott:wolf_meat"
+  },
+  "result": "mott:cooked_wolf_meat",
+  "experience": 0.35,
+  "cookingtime": 200
+}

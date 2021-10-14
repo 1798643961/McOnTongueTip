@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:sea_pickle"
+    },
+    {
+      "item": "mott:rice"
+    }
+  ],
+  "result": {
+    "item": "mott:roll_sea_pickle",
+    "count": 1
+  },
+  "group": "sushi"
+}

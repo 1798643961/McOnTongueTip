@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mott:dough"
+    },
+    {
+      "item": "mott:caramel"
+    }
+  ],
+  "result": {
+    "item": "mott:caramel_donut",
+    "count": 1
+  }
+}

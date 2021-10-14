@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "group": "mott",
+  "pattern": [
+    "###",
+    "#W#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "W":{
+      "item":"minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "mott:dough",
+    "count": 8
+  }
+}

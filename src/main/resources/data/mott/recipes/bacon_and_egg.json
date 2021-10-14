@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mott:cooked_bacon"
+    },
+    {
+      "item": "mott:fried_egg"
+    }
+  ],
+  "result": {
+    "item": "mott:bacon_and_egg",
+    "count": 1
+  }
+}

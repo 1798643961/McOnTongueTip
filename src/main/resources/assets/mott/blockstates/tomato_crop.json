@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "mott:block/tomato_crop_stage_0" },
+        "age=1": { "model": "mott:block/tomato_crop_stage_0" },
+        "age=2": { "model": "mott:block/tomato_crop_stage_1" },
+        "age=3": { "model": "mott:block/tomato_crop_stage_1" },
+        "age=4": { "model": "mott:block/tomato_crop_stage_2" },
+        "age=5": { "model": "mott:block/tomato_crop_stage_2" },
+        "age=6": { "model": "mott:block/tomato_crop_stage_2" },
+        "age=7": { "model": "mott:block/tomato_crop_stage_3" }
+    }
+}

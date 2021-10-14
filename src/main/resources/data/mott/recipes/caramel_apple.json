@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "mott:caramel"
+    }
+  ],
+  "result": {
+    "item": "mott:caramel_apple",
+    "count": 1
+  }
+}

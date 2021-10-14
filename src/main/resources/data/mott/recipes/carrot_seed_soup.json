@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+		"item": "minecraft:bowl"
+    },
+	{
+		"item": "minecraft:carrot"
+	},
+	{
+	    "item": "minecraft:carrot"
+	}
+  ],
+  "result": {
+    "item": "mott:carrot_seed_soup",
+    "count": 2
+  }
+}

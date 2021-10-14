@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mott:horse_meat"
+  },
+  "result": "mott:cooked_horse_meat",
+  "experience": 0.35,
+  "cookingtime": 200
+}

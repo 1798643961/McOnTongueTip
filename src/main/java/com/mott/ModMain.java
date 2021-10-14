@@ -2,8 +2,7 @@ package com.mott;
 
 import com.mott.config.Configuration;
 import com.mott.config.ModConfig;
-import com.mott.registry.EntityRegistry;
-import com.mott.registry.ItemRegistry;
+import com.mott.registry.*;
 import com.mott.util.Reference;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +12,10 @@ public class ModMain implements ModInitializer{
     public void onInitialize() {
         ItemRegistry.registerItems();
         EntityRegistry.registerEntities();
+        FoodRegistry.registerFood();
+        CropRegistry.registerCrop();
+        LootTableRegistry.registerLootTable();
+        WorldGenRgeistry.registerWorldGen();
         new Configuration(ModConfig.class, Reference.MODID);
     }
 }

@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "#C#",
+    "BMB",
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "C": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "M": {
+      "item": "mott:rice"
+    },
+    "B":{
+      "item": "mott:cheese"
+    }
+  },
+  "result": {
+    "item": "mott:nachos_cheese",
+    "count": 16
+  }
+}

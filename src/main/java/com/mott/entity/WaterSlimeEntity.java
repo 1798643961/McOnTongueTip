@@ -12,7 +12,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.ChickenEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
@@ -25,7 +25,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class WaterSlimeEntity extends ChickenEntity {
+public class WaterSlimeEntity extends AnimalEntity {
 
     public float tiltAngle;
     public float prevTiltAngle;
@@ -42,11 +42,21 @@ public class WaterSlimeEntity extends ChickenEntity {
     private float swimY;
     private float swimZ;
 
-    public WaterSlimeEntity(EntityType<? extends ChickenEntity> entityType, World world) {
+    public float flapProgress;
+    public float maxWingDeviation;
+    public float prevMaxWingDeviation;
+    public float prevFlapProgress;
+    public float flapSpeed = 1.0F;
+    private float field_28639 = 1.0F;
+    public int eggLayTime;
+    public boolean jockey;
+
+    public WaterSlimeEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
         this.random.setSeed((long)this.getId());
         this.thrustTimerSpeed = 1.0F / (this.random.nextFloat() + 1.0F) * 0.2F;
     }
+
 
     @Override
     protected void initGoals() {
@@ -161,7 +171,7 @@ public class WaterSlimeEntity extends ChickenEntity {
     }
 
     @Override
-    public ChickenEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
+    public PassiveEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
         return (WaterSlimeEntity) EntityListener.WATER_SLIME.create(serverWorld);
     }
 
@@ -173,5 +183,9 @@ public class WaterSlimeEntity extends ChickenEntity {
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_SLIME_DEATH;
+    }
+
+    public boolean hasJockey() {
+        return this.jockey;
     }
 }

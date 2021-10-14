@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "minecraft:bowl"
+	},
+	{
+		"item": "minecraft:nether_wart"
+	},
+	{
+		"item": "minecraft:nether_wart"
+	},
+	{
+		"item": "minecraft:sugar"
+	}
+  ],
+  "result": {
+    "item": "mott:nether_wart_soup",
+    "count": 1
+  }
+}

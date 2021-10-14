@@ -1,0 +1,24 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "minecraft:bowl"
+	},
+	{
+		"item": "minecraft:beetroot"
+	},
+	{
+		"item": "minecraft:beetroot"
+	},
+	{
+		"item": "minecraft:wheat"
+	},
+	{
+		"item": "minecraft:water_bucket"
+	}
+  ],
+  "result": {
+    "item": "mott:beetroot_noodles",
+    "count": 1
+  }
+}

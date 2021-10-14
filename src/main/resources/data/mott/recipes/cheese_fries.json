@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "mott:cheese"
+    }
+  ],
+  "result": {
+    "item": "mott:cheese_fries",
+    "count": 1
+  }
+}

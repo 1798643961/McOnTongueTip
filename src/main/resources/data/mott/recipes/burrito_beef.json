@@ -1,0 +1,25 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "mott:dough"
+    },
+    {
+      "item": "mott:tomato"
+    },
+    {
+      "item": "minecraft:cooked_beef"
+    },
+    {
+      "item": "mott:cheese"
+    }
+  ],
+  "result": {
+    "item": "mott:burrito_beef",
+    "count": 1
+  },
+  "group": "burrito"
+}

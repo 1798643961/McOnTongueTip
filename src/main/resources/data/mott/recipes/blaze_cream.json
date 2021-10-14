@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "minecraft:bowl"
+	},
+	{
+		"item": "minecraft:blaze_powder"
+	},
+	{
+		"item": "minecraft:blaze_powder"
+	},
+	{
+		"item": "minecraft:milk_bucket"
+	}
+  ],
+  "result": {
+    "item": "mott:blaze_cream",
+    "count": 1
+  }
+}
