@@ -1,5 +1,6 @@
 package com.mott.entity;
 
+import com.mott.listener.ItemListener;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -83,4 +84,11 @@ public class FutaCowEntity extends ParrotEntity {
         return 0.4F;
     }
 
+    @Override
+    public void onDeath(DamageSource source) {
+        if (source.getSource() == DamageSource.ANVIL.getSource()) {
+            dropStack(ItemListener.FUTA_COW_SPAWN_EGG.getDefaultStack());
+        }
+        super.onDeath(source);
+    }
 }

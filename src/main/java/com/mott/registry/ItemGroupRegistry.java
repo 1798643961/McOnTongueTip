@@ -11,7 +11,7 @@ public class ItemGroupRegistry {
 
     public static final ItemGroup COMMON_GROUP =
             FabricItemGroupBuilder.build(
-                    new Identifier(Reference.MODID),
+                    new Identifier(Reference.MODID, "common"),
                     () ->new ItemStack(ItemListener.FUTA_COW_SPAWN_EGG)
     );
 }

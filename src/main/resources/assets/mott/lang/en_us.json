@@ -1,4 +1,10 @@
 {
   "entity.mott.futa_cow": "Futa Cow",
-  "item.mott.futa_cow_spawn_egg": "Futa Cow Spawn Egg"
+  "item.mott.futa_cow_spawn_egg": "Futa Cow Spawn Egg",
+  "itemGroup.mott.common": "Mott Common",
+  "mott.futa_cow.1": "Futa Cow has sit down",
+  "mott.futa_cow.2": "Futa Cow has stand up",
+  "entity.mott.moon_slime": "Moon Slime",
+  "item.mott.moon_slime_spawn_egg": "Moon Slime Spawn Egg",
+  "item.mott.moon_slime_ball": "Moon Slime Ball"
 }

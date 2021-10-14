@@ -18,18 +18,18 @@ public abstract class FutaCowSitGoalMixin {
 
     @Shadow @Final private TameableEntity tameable;
 
-    PlayerEntity futa_cow_owner = (PlayerEntity) tameable.getOwner();
-
     @Inject(method = "start", at = @At("RETURN"))
     private void onFutaCowStart(CallbackInfo ci) {
-        if (this.tameable instanceof FutaCowEntity && ModConfig.showFutaCowInfo){
+        PlayerEntity futa_cow_owner = (PlayerEntity) tameable.getOwner();
+        if (this.tameable instanceof FutaCowEntity && ModConfig.showFutaCowInfo && futa_cow_owner != null){
             futa_cow_owner.sendMessage(new TranslatableText("mott.futa_cow.1"), false);
         }
     }
 
     @Inject(method = "stop", at =@At("RETURN"))
     private void onFutaCowStop(CallbackInfo ci) {
-        if (this.tameable instanceof FutaCowEntity && ModConfig.showFutaCowInfo) {
+        PlayerEntity futa_cow_owner = (PlayerEntity) tameable.getOwner();
+        if (this.tameable instanceof FutaCowEntity && ModConfig.showFutaCowInfo && futa_cow_owner != null) {
             futa_cow_owner.sendMessage(new TranslatableText("mott.futa_cow.2"), false);
         }
     }

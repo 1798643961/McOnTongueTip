@@ -4,7 +4,9 @@
   "package": "com.mott.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "FutaCowSitGoalMixin"
+    "FutaCowSitGoalMixin",
+    "FutaCowBiomeSpawnMixin",
+    "MoonSlimeSpawnMixin"
   ],
   "client": [
   ],

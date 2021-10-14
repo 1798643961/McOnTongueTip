@@ -1,4 +1,10 @@
 {
   "entity.mott.futa_cow": "扶她牛",
-  "item.mott.futa_cow_spawn_egg": "扶她牛生成蛋"
+  "item.mott.futa_cow_spawn_egg": "扶她牛生成蛋",
+  "itemGroup.mott.common": "舌尖上的MC",
+  "mott.futa_cow.1": "扶她牛坐下了",
+  "mott.futa_cow.2": "扶她牛站起来了",
+  "entity.mott.moon_slime": "月光史莱姆",
+  "item.mott.moon_slime_spawn_egg": "月光史莱姆生成蛋",
+  "item.mott.moon_slime_ball": "月光史莱姆球"
 }

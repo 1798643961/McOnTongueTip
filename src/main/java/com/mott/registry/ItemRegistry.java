@@ -11,6 +11,8 @@ public class ItemRegistry {
 
     public static void registerItems() {
         initItem("futa_cow_spawn_egg", FUTA_COW_SPAWN_EGG);
+        initItem("moon_slime_spawn_egg", MOON_SLIME_SPAWN_EGG);
+        initItem("moon_slime_ball", MOON_SLIME_BALL);
     }
 
     private static void initItem(String path, Item item) {
