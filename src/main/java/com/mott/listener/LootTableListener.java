@@ -18,7 +18,7 @@ public class LootTableListener {
     public static final Identifier HORSE_MEAT_TABLE_ID = genEntityDrops(EntityType.HORSE);
     public static final Identifier LLAMA_MEAT_TABLE_ID = genEntityDrops(EntityType.LLAMA);
     public static final Identifier WOLF_MEAT_TABLE_ID = genEntityDrops(EntityType.WOLF);
-    public static final Identifier PIG_LEATHER_TABLE_ID = genEntityDrops(EntityType.PIG);
+    public static final Identifier CREEPER_HIDE_TABLE_ID = genEntityDrops(EntityType.CREEPER);
 
     private static Identifier genEntityDrops(EntityType type) {
         return type.getLootTableId();

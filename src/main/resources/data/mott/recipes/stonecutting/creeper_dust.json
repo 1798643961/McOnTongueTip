@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting", 
+  "ingredients": {
+    "item": "mott:creeper_hide"
+  },
+  "result": {
+    "item": "mott:creeper_dust",
+    "count": 4
+  }
+}

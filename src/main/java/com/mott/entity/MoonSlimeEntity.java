@@ -9,7 +9,7 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
@@ -23,18 +23,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class MoonSlimeEntity extends AnimalEntity {
+public class MoonSlimeEntity extends ChickenEntity {
 
-    public float flapProgress;
-    public float maxWingDeviation;
-    public float prevMaxWingDeviation;
-    public float prevFlapProgress;
-    public float flapSpeed = 1.0F;
-    private float field_28639 = 1.0F;
-    public int eggLayTime;
-    public boolean jockey;
-
-    public MoonSlimeEntity(EntityType<? extends AnimalEntity> entityType, World world) {
+    public MoonSlimeEntity(EntityType<? extends ChickenEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -105,7 +96,7 @@ public class MoonSlimeEntity extends AnimalEntity {
 
     @Nullable
     @Override
-    public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+    public ChickenEntity createChild(ServerWorld world, PassiveEntity entity) {
         return (MoonSlimeEntity) EntityListener.MOON_SLIME.create(world);
     }
 
@@ -117,10 +108,6 @@ public class MoonSlimeEntity extends AnimalEntity {
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_SLIME_DEATH;
-    }
-
-    public boolean hasJockey() {
-        return this.jockey;
     }
 
     @Override

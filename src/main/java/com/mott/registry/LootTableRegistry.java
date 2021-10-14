@@ -31,6 +31,7 @@ public class LootTableRegistry {
         initLootTable(HORSE_MEAT_TABLE_ID, 1, 0.7F, FoodListener.HORSE_MEAT);
         initLootTable(LLAMA_MEAT_TABLE_ID, 1, 0.7F, FoodListener.LLAMA_MEAT);
         initLootTable(WOLF_MEAT_TABLE_ID, 1, 0.7F, FoodListener.WOLF_MEAT);
+        initLootTable(CREEPER_HIDE_TABLE_ID, 1, 0.8F, ItemListener.CREEPER_HIDE);
     }
 
     private static void initLootTable(Identifier identifier, int number, float chance, Item item) {

@@ -1,7 +1,7 @@
 {
   "entity.mott.futa_cow": "扶她牛",
   "item.mott.futa_cow_spawn_egg": "扶她牛生成蛋",
-  "itemGroup.mott.common": "舌尖上的MC",
+  "itemGroup.mott.common": "舌尖上的MC|通用",
   "mott.futa_cow.1": "扶她牛坐下了",
   "mott.futa_cow.2": "扶她牛站起来了",
   "entity.mott.moon_slime": "月光史莱姆",
@@ -75,5 +75,8 @@
   "item.mott.moon_slime_sandwich": "月光史莱姆三明治",
   "item.mott.water_slime_sandwich": "水生史莱姆三明治",
   "item.mott.squid_raw": "生鱿鱼肉",
-  "item.mott.water_slime_jam": "水生史莱姆酱"
+  "item.mott.water_slime_jam": "水生史莱姆酱",
+  "item.mott.creeper_hide": "苦力怕皮革",
+  "item.mott.creeper_dust": "苦力怕粉尘",
+  "itemGroup.mott.food": "舌尖上的MC|食物"
 }

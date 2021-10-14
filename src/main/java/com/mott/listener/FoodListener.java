@@ -69,6 +69,6 @@ public class FoodListener {
     public static final Item COOKED_WOLF_MEAT = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
 
     private static Item.Settings ofDefaultFoodSettings(FoodComponent component) {
-        return new Item.Settings().group(ItemGroupRegistry.COMMON_GROUP).food(component);
+        return new Item.Settings().group(ItemGroupRegistry.FOOD_GROUP).food(component);
     }
 }
