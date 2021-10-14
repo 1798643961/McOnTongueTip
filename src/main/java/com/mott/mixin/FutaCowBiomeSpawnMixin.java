@@ -1,5 +1,6 @@
 package com.mott.mixin;
 
+import com.mott.config.ModConfig;
 import com.mott.listener.EntityListener;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.SpawnSettings;
@@ -14,11 +15,15 @@ public class FutaCowBiomeSpawnMixin {
 
     @Inject(method = "addJungleMobs", at =@At("RETURN"))
     private static void addFutaCowJungleSpawn(SpawnSettings.Builder builder, CallbackInfo ci) {
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.FUTA_COW, 10, 1, 4));
+        if (ModConfig.futaCowSpawn) {
+            builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.FUTA_COW, 10, 1, 4));
+        }
     }
 
     @Inject(method = "addPlainsMobs", at =@At("RETURN"))
     private static void adFutaCowPlainsSpawn(SpawnSettings.Builder builder, CallbackInfo ci) {
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.FUTA_COW, 10, 1, 4));
+        if (ModConfig.futaCowSpawn) {
+            builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.FUTA_COW, 10, 1, 4));
+        }
     }
 }

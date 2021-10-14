@@ -1,5 +1,6 @@
 package com.mott.mixin;
 
+import com.mott.config.ModConfig;
 import com.mott.listener.EntityListener;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.SpawnSettings;
@@ -14,6 +15,8 @@ public class MoonSlimeSpawnMixin {
 
     @Inject(method = "addMonsters", at = @At("RETURN"))
     private static void addMoonSlimeSpawn(SpawnSettings.Builder builder, int zombieWeight, int zombieVillagerWeight, int skeletonWeight, CallbackInfo ci) {
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.MOON_SLIME, 12, 1, 4));
+        if (ModConfig.moonSlimeSpawn) {
+            builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityListener.MOON_SLIME, 10, 1, 4));
+        }
     }
 }

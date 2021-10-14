@@ -6,5 +6,10 @@
   "mott.futa_cow.2": "扶她牛站起来了",
   "entity.mott.moon_slime": "月光史莱姆",
   "item.mott.moon_slime_spawn_egg": "月光史莱姆生成蛋",
-  "item.mott.moon_slime_ball": "月光史莱姆球"
+  "item.mott.moon_slime_ball": "月光史莱姆球",
+  "item.mott.moon_slime_gel": "月光史莱姆黏胶",
+  "item.mott.moon_slime_jam": "月光史莱姆酱",
+  "entity.mott.water_slime": "水滴史莱姆",
+  "item.mott.water_slime_spawn_egg": "水滴史莱姆生成蛋",
+  "item.mott.water_slime_ball": "水滴史莱姆球"
 }

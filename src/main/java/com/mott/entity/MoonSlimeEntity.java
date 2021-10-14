@@ -20,7 +20,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class MoonSlimeEntity extends ChickenEntity {
@@ -45,23 +44,14 @@ public class MoonSlimeEntity extends ChickenEntity {
         return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D);
     }
 
-
     @Override
     public void tickMovement() {
-        super.tickMovement();
         this.prevFlapProgress = this.flapProgress;
         this.prevMaxWingDeviation = this.maxWingDeviation;
         this.maxWingDeviation = (float)((double)this.maxWingDeviation + (double)(this.onGround ? -1 : 4) * 0.3D);
         this.maxWingDeviation = MathHelper.clamp(this.maxWingDeviation, 0.0F, 1.0F);
-        if (!this.onGround && this.flapSpeed < 1.0F) {
-            this.flapSpeed = 1.0F;
-        }
 
         this.flapSpeed = (float)((double)this.flapSpeed * 0.9D);
-        Vec3d vec3d = this.getVelocity();
-        if (!this.onGround && vec3d.y < 0.0D) {
-            this.setVelocity(vec3d.multiply(1.0D, 0.6D, 1.0D));
-        }
 
         this.flapProgress += this.flapSpeed * 2.0F;
         if (!this.world.isClient && this.isAlive() && !this.isBaby() && !this.hasJockey() && --this.eggLayTime <= 0) {
@@ -90,6 +80,7 @@ public class MoonSlimeEntity extends ChickenEntity {
                 }
             }
         }
+        super.tickMovement();
     }
 
     protected boolean burnsInDaylight() {
@@ -116,4 +107,11 @@ public class MoonSlimeEntity extends ChickenEntity {
         return SoundEvents.ENTITY_SLIME_DEATH;
     }
 
+    @Override
+    public void onDeath(DamageSource source) {
+        if (source.isMagic()) {
+            this.dropStack(ItemListener.MOON_SLIME_SPAWN_EGG.getDefaultStack());
+        }
+        super.onDeath(source);
+    }
 }

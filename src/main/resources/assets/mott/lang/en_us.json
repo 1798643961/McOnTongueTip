@@ -6,5 +6,10 @@
   "mott.futa_cow.2": "Futa Cow has stand up",
   "entity.mott.moon_slime": "Moon Slime",
   "item.mott.moon_slime_spawn_egg": "Moon Slime Spawn Egg",
-  "item.mott.moon_slime_ball": "Moon Slime Ball"
+  "item.mott.moon_slime_ball": "Moon Slime Ball",
+  "item.mott.moon_slime_gel": "Moon Slime Gel",
+  "item.mott.moon_slime_jam": "Moon Slime Jam",
+  "entity.mott.water_slime": "Water Slime",
+  "item.mott.water_slime_spawn_egg": "Water Slime Spawn Egg",
+  "item.mott.water_slime_ball": "Water Slime Ball"
 }

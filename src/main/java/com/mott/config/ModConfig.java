@@ -7,4 +7,9 @@ public class ModConfig {
     @Config(config = "common", category = "common", key = "showFutaCowInfo", comment = "Enable or Disable to show Futa Cow sit info")
     public static boolean showFutaCowInfo = true;
 
+    @Config(config = "common", category = "common", key = "futaCowSpawn", comment = "Enable or Disable to let Futa Cow Spawn")
+    public static boolean futaCowSpawn = true;
+
+    @Config(config = "common", category = "common", key = "moonSlimeSpawn", comment = "Enable or Disable to let Moon Slime Spawn")
+    public static boolean moonSlimeSpawn = true;
 }

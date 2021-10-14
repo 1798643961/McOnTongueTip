@@ -6,7 +6,8 @@
   "mixins": [
     "FutaCowSitGoalMixin",
     "FutaCowBiomeSpawnMixin",
-    "MoonSlimeSpawnMixin"
+    "MoonSlimeSpawnMixin",
+    "WaterSlimeSpawnMixin"
   ],
   "client": [
   ],
