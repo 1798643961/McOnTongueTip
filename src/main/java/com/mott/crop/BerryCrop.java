@@ -1,20 +1,18 @@
 package com.mott.crop;
 
 import com.mott.listener.FoodListener;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SweetBerryBushBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
+import net.minecraft.block.CropBlock;
+import net.minecraft.item.ItemConvertible;
 
-public class BerryCrop extends SweetBerryBushBlock {
+public class BerryCrop extends CropBlock {
+
 
     public BerryCrop(Settings settings) {
         super(settings);
     }
 
     @Override
-    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return FoodListener.BERRY.getDefaultStack();
+    protected ItemConvertible getSeedsItem() {
+        return FoodListener.BERRY;
     }
 }

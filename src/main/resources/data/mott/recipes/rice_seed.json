@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:sweet_berries"
+      "item": "mott:rice"
     }
   ],
   "result": {
-    "item": "mott:berry",
-    "count": 1
+    "item": "mott:rice_seed",
+    "count": 2
   }
 }

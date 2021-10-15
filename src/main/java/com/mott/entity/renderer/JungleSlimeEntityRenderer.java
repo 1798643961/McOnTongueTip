@@ -1,6 +1,6 @@
 package com.mott.entity.renderer;
 
-import com.mott.entity.slime.MoonSlimeEntity;
+import com.mott.entity.slime.JungleSlimeEntity;
 import com.mott.util.Reference;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
@@ -9,16 +9,15 @@ import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.SlimeEntityModel;
 import net.minecraft.util.Identifier;
 
-public class MoonSlimeEntityRenderer extends MobEntityRenderer<MoonSlimeEntity, SlimeEntityModel<MoonSlimeEntity>> {
+public class JungleSlimeEntityRenderer extends MobEntityRenderer<JungleSlimeEntity, SlimeEntityModel<JungleSlimeEntity>> {
 
-    public MoonSlimeEntityRenderer(EntityRendererFactory.Context context) {
+    public JungleSlimeEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new SlimeEntityModel<>(context.getPart(EntityModelLayers.SLIME)), 0.25F);
         this.addFeature(new SlimeOverlayFeatureRenderer(this, context.getModelLoader()));
     }
 
     @Override
-    public Identifier getTexture(MoonSlimeEntity entity) {
-        return new Identifier(Reference.MODID, "textures/entity/moon_slime.png");
+    public Identifier getTexture(JungleSlimeEntity entity) {
+        return new Identifier(Reference.MODID, "textures/entity/jungle_slime.png");
     }
-
 }

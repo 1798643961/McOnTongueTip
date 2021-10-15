@@ -1,6 +1,6 @@
 package com.mott.entity.renderer;
 
-import com.mott.entity.WaterSlimeEntity;
+import com.mott.entity.slime.WaterSlimeEntity;
 import com.mott.util.Reference;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;

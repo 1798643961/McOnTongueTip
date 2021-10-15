@@ -22,6 +22,9 @@ public class ItemRegistry {
         initItem("tomato_seed", TOMATO_SEED);
         initItem("creeper_hide", CREEPER_HIDE);
         initItem("creeper_dust", CREEPER_DUST);
+        initItem("jungle_slime_ball", JUNGLE_SLIME_BALL);
+        initItem("jungle_slime_gel", JUNGLE_SLIME_GEL);
+        initItem("jungle_slime_spawn_egg", JUNGLE_SLIME_SPAWN_EGG);
     }
 
     private static void initItem(String path, Item item) {

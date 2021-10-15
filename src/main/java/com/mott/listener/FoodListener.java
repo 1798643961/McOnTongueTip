@@ -1,6 +1,7 @@
 package com.mott.listener;
 
 import com.mott.registry.ItemGroupRegistry;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
@@ -14,6 +15,8 @@ public class FoodListener {
     public static final Item MOON_SLIME_SANDWICH = new Item(ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
     public static final Item WATER_SLIME_JAM = new Item(ofDefaultFoodSettings(FoodComponents.BEETROOT_SOUP));
     public static final Item WATER_SLIME_SANDWICH = new Item(ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
+    public static final Item JUNGLE_SLIME_JAM = new Item(ofDefaultFoodSettings(FoodComponents.BEETROOT_SOUP));
+    public static final Item JUNGLE_SLIME_SANDWICH = new Item(ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
 
     public static final Item APPLE_PIE = new Item (ofDefaultFoodSettings(FoodComponents.APPLE));
     public static final Item BERRY_JELLY = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_CHICKEN));
@@ -24,7 +27,7 @@ public class FoodListener {
     public static final Item BURRITO_FISH = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_COD));
     public static final Item BURRITO_VEGGIE = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_CHICKEN));
     public static final Item CARAMEL = new Item (ofDefaultFoodSettings(FoodComponents.APPLE));
-    public static final Item BERRY = new Item (ofDefaultFoodSettings(FoodComponents.APPLE));
+    public static final Item BERRY = new AliasedBlockItem(CropListener.BERRY_CROP,ofDefaultFoodSettings(FoodComponents.APPLE));
     public static final Item CARAMEL_DONUT = new Item (ofDefaultFoodSettings(FoodComponents.APPLE));
     public static final Item CHEESE_FRIES = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_MUTTON));
     public static final Item CHOCOLATE_PIE = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));

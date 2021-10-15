@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "mott:block/berry_crop_stage_2"
+    }
+}

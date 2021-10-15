@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mott:rice"
+          "name": "mott:berry"
         }
       ]
     },
@@ -28,13 +28,13 @@
               }
             }
           ],
-          "name": "mott:rice"
+          "name": "mott:berry"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "mott:rice_crop",
+          "block": "mott:berry_crop",
           "properties": {
             "age": "7"
           }

@@ -1,31 +1,28 @@
-package com.mott.entity;
+package com.mott.entity.slime;
 
+import com.mott.entity.base.BaseSlimeEntity;
 import com.mott.entity.goal.WaterSlimeEscapeAttackerGoal;
 import com.mott.entity.goal.WaterSlimeSwimGoal;
 import com.mott.listener.EntityListener;
 import com.mott.listener.ItemListener;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.ChickenEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class WaterSlimeEntity extends ChickenEntity {
+public class WaterSlimeEntity extends BaseSlimeEntity {
 
     public float tiltAngle;
     public float prevTiltAngle;
@@ -42,7 +39,7 @@ public class WaterSlimeEntity extends ChickenEntity {
     private float swimY;
     private float swimZ;
 
-    public WaterSlimeEntity(EntityType<? extends ChickenEntity> entityType, World world) {
+    public WaterSlimeEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
         this.random.setSeed((long)this.getId());
         this.thrustTimerSpeed = 1.0F / (this.random.nextFloat() + 1.0F) * 0.2F;
@@ -58,10 +55,6 @@ public class WaterSlimeEntity extends ChickenEntity {
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(7, new LookAroundGoal(this));
         this.goalSelector.add(8, new SwimAroundGoal(this, 1.0D, 40));
-    }
-
-    public static DefaultAttributeContainer.Builder createWaterSlimeAttributes() {
-        return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D);
     }
 
     @Override
@@ -125,18 +118,10 @@ public class WaterSlimeEntity extends ChickenEntity {
 
             this.tiltAngle = (float)((double)this.tiltAngle + (double)(-90.0F - this.tiltAngle) * 0.02D);
         }
-
-        this.prevFlapProgress = this.flapProgress;
-        this.prevMaxWingDeviation = this.maxWingDeviation;
-        this.maxWingDeviation = (float)((double)this.maxWingDeviation + (double)(this.onGround ? -1 : 4) * 0.3D);
-        this.maxWingDeviation = MathHelper.clamp(this.maxWingDeviation, 0.0F, 1.0F);
-        this.flapSpeed = (float)((double)this.flapSpeed * 0.9D);
-
-        this.flapProgress += this.flapSpeed * 2.0F;
-        if (!this.world.isClient && this.isAlive() && !this.isBaby() && !this.hasJockey() && --this.eggLayTime <= 0) {
+        if (!this.world.isClient && this.isAlive() && !this.isBaby() && --this.ballLayTime <= 0) {
             this.playSound(SoundEvents.ENTITY_SLIME_JUMP, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(ItemListener.WATER_SLIME_BALL);
-            this.eggLayTime = this.random.nextInt(6000) + 6000;
+            this.ballLayTime = this.random.nextInt(6000) + 6000;
         }
         if (this.isTouchingWater()) {
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING));
@@ -156,23 +141,15 @@ public class WaterSlimeEntity extends ChickenEntity {
     }
 
     @Override
-    protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_SLIME_JUMP;
-    }
-
-    @Override
-    public ChickenEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
+    public WaterSlimeEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
         return (WaterSlimeEntity) EntityListener.WATER_SLIME.create(serverWorld);
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_SLIME_HURT;
+    public void onDeath(DamageSource source) {
+        if (source.isMagic()) {
+            this.dropStack(ItemListener.WATER_SLIME_SPAWN_EGG.getDefaultStack());
+        }
+        super.onDeath(source);
     }
-
-    @Override
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_SLIME_DEATH;
-    }
-
 }

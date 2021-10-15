@@ -78,5 +78,11 @@
   "item.mott.water_slime_jam": "水生史莱姆酱",
   "item.mott.creeper_hide": "苦力怕皮革",
   "item.mott.creeper_dust": "苦力怕粉尘",
-  "itemGroup.mott.food": "舌尖上的MC|食物"
+  "itemGroup.mott.food": "舌尖上的MC|食物",
+  "entity.mott.jungle_slime": "森林史莱姆",
+  "item.mott.jungle_slime_ball": "森林史莱姆球",
+  "item.mott.jungle_slime_gel": "森林史莱姆黏胶",
+  "item.mott.jungle_slime_jam": "森林史莱姆酱",
+  "item.mott.jungle_slime_sandwich": "森林史莱姆三明治",
+  "item.mott.jungle_slime_spawn_egg": "森林史莱姆生成蛋"
 }

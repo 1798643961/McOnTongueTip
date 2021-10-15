@@ -10,6 +10,7 @@ public class ItemListener {
     public static final Item FUTA_COW_SPAWN_EGG = new SpawnEggItem(EntityListener.FUTA_COW,  12895428, 11382189, ofDefaultItemSettings());
     public static final Item WATER_SLIME_SPAWN_EGG = new SpawnEggItem(EntityListener.WATER_SLIME,  12895428, 11382189, ofDefaultItemSettings());
     public static final Item MOON_SLIME_SPAWN_EGG = new SpawnEggItem(EntityListener.MOON_SLIME,  12895428, 11382189, ofDefaultItemSettings());
+    public static final Item JUNGLE_SLIME_SPAWN_EGG = new SpawnEggItem(EntityListener.JUNGLE_SLIME,  12895428, 11382189, ofDefaultItemSettings());
     public static final Item MOON_SLIME_BALL = new Item(ofDefaultItemSettings());
     public static final Item MOON_SLIME_GEL = new Item(ofDefaultItemSettings());
     public static final Item WATER_SLIME_BALL = new Item(ofDefaultItemSettings());
@@ -19,6 +20,8 @@ public class ItemListener {
     public static final Item GREEN_TEA_SEED = new AliasedBlockItem(CropListener.GREEN_TEA_CROP, ofDefaultItemSettings());
     public static final Item CREEPER_HIDE = new Item(ofDefaultItemSettings());
     public static final Item CREEPER_DUST = new Item(ofDefaultItemSettings());
+    public static final Item JUNGLE_SLIME_BALL = new Item(ofDefaultItemSettings());
+    public static final Item JUNGLE_SLIME_GEL = new Item(ofDefaultItemSettings());
 
     private static Item.Settings ofDefaultItemSettings() {
         return new Item.Settings().group(ItemGroupRegistry.COMMON_GROUP);

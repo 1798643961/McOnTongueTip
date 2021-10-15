@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mott:jungle_slime_ball"
+  },
+  "result": "mott:jungle_slime_gel",
+  "experience": 0.35,
+  "cookingtime": 200
+}

@@ -16,14 +16,14 @@ public class WaterSlimeSpawnMixin {
     @Inject(method = "addOceanMobs", at =@At("RETURN"))
     private static void addWaterSlimeOceanSpawn(SpawnSettings.Builder builder, int squidWeight, int squidMaxGroupSize, int codWeight, CallbackInfo ci) {
         if (ModConfig.waterSlimeSpawn) {
-            builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 60, 1, 4));
+            builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 100, 1, 6));
         }
     }
 
     @Inject(method = "addWarmOceanMobs", at =@At("RETURN"))
     private static void addWaterSlimeWarmOceanSpawn(SpawnSettings.Builder builder, int squidWeight, int squidMinGroupSize, CallbackInfo ci) {
         if (ModConfig.waterSlimeSpawn) {
-            builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 60, 1, 4));
+            builder.spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityListener.WATER_SLIME, 100, 1, 6));
         }
     }
 }

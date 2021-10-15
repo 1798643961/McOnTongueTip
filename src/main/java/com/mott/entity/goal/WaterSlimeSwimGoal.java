@@ -1,6 +1,6 @@
 package com.mott.entity.goal;
 
-import com.mott.entity.WaterSlimeEntity;
+import com.mott.entity.slime.WaterSlimeEntity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.util.math.MathHelper;
 

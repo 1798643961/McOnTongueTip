@@ -1,9 +1,8 @@
 package com.mott.entity.goal;
 
-import com.mott.entity.WaterSlimeEntity;
+import com.mott.entity.slime.WaterSlimeEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.NoPenaltyTargeting;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.fluid.FluidState;

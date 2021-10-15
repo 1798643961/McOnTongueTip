@@ -14,6 +14,8 @@ public class FoodRegistry {
         initFood("moon_slime_sandwich", MOON_SLIME_SANDWICH);
         initFood("water_slime_jam", WATER_SLIME_JAM);
         initFood("water_slime_sandwich", WATER_SLIME_SANDWICH);
+        initFood("jungle_slime_jam", JUNGLE_SLIME_JAM);
+        initFood("jungle_slime_sandwich", JUNGLE_SLIME_SANDWICH);
         initFood("apple_pie", APPLE_PIE);
         initFood("berry_jelly", BERRY_JELLY);
         initFood("berry_pie", BERRY_PIE);

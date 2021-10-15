@@ -77,5 +77,12 @@
   "item.mott.squid_raw": "Raw Squid",
   "item.mott.water_slime_jam": "Water Slime Jam",
   "item.mott.creeper_hide": "Creeper Hide",
-  "item.mott.creeper_dust": "Creeper Dust"
+  "item.mott.creeper_dust": "Creeper Dust",
+  "itemGroup.mott.food": "Mott Food",
+  "entity.mott.jungle_slime": "Jungle Slime",
+  "item.mott.jungle_slime_ball": "Jungle Slime Ball",
+  "item.mott.jungle_slime_gel": "Jungle Slime Gel",
+  "item.mott.jungle_slime_jam": "Jungle Slime Jam",
+  "item.mott.jungle_slime_sandwich": "Jungle Slime Sandwich",
+  "item.mott.jungle_slime_spawn_egg": "Jungle Slime Spawn Egg"
 }

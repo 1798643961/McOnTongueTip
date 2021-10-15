@@ -13,6 +13,7 @@ public class CropRegistry {
         initCrop("rice_crop", RICE_CROP);
         initCrop("tomato_crop", TOMATO_CROP);
         initCrop("green_tea_crop", GREEN_TEA_CROP);
+        initCrop("berry_crop", BERRY_CROP);
     }
 
     private static void initCrop(String path, CropBlock block) {

@@ -23,6 +23,8 @@ public class LootTableRegistry {
         initLootTable(GRASS_LOOT_TABLE_ID, 1, 0.2F, ItemListener.TOMATO_SEED);
         initLootTable(TALLGRASS_LOOT_TABLE_ID, 1, 0.2F, ItemListener.TOMATO_SEED);
         initLootTable(GRASS_LOOT_TABLE_ID, 1, 0.2F, ItemListener.GREEN_TEA_SEED);
+        initLootTable(TALLGRASS_LOOT_TABLE_ID, 1, 0.2F, FoodListener.BERRY);
+        initLootTable(GRASS_LOOT_TABLE_ID, 1, 0.2F, FoodListener.BERRY);
 
         /*Entity LootTables*/
         initLootTable(SQUID_RAW_TABLE_ID, 1, 0.7F, FoodListener.SQUID_RAW);
