@@ -70,6 +70,9 @@ public class FoodListener {
     public static final Item COOKED_LLAMA_MEAT = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
     public static final Item WOLF_MEAT = new Item (ofDefaultFoodSettings(FoodComponents.BEEF));
     public static final Item COOKED_WOLF_MEAT = new Item (ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
+    public static final Item AROMATIC_MILKSHAKE = new Item(ofDefaultFoodSettings(FoodComponents.SPIDER_EYE));
+
+    public static final Item SHIT_JAM = new Item(ofDefaultFoodSettings(FoodComponents.COOKED_BEEF));
 
     private static Item.Settings ofDefaultFoodSettings(FoodComponent component) {
         return new Item.Settings().group(ItemGroupRegistry.FOOD_GROUP).food(component);

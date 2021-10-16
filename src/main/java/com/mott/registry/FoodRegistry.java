@@ -69,6 +69,8 @@ public class FoodRegistry {
         initFood("cooked_wolf_meat", COOKED_WOLF_MEAT);
         initFood("rice", RICE);
         initFood("tomato", TOMATO);
+        initFood("shit_jam", SHIT_JAM);
+        initFood("aromatic_milkshake", AROMATIC_MILKSHAKE);
     }
 
     private static void initFood(String path, Item item) {

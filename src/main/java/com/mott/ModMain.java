@@ -14,6 +14,7 @@ public class ModMain implements ModInitializer{
         EntityRegistry.registerEntities();
         FoodRegistry.registerFood();
         CropRegistry.registerCrop();
+        BlockRegistry.registerBlocks();
         LootTableRegistry.registerLootTable();
         WorldGenRgeistry.registerWorldGen();
         new Configuration(ModConfig.class, Reference.MODID);

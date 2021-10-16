@@ -84,5 +84,9 @@
   "item.mott.jungle_slime_gel": "森林史莱姆黏胶",
   "item.mott.jungle_slime_jam": "森林史莱姆酱",
   "item.mott.jungle_slime_sandwich": "森林史莱姆三明治",
-  "item.mott.jungle_slime_spawn_egg": "森林史莱姆生成蛋"
+  "item.mott.jungle_slime_spawn_egg": "森林史莱姆生成蛋",
+  "block.mott.jar": "罐子",
+  "block.mott.cow_jar": "罐中奶牛",
+  "item.mott.shit_jam": "史之郎果冻",
+  "item.mott.aromatic_milkshake": "芳香奶昔"
 }

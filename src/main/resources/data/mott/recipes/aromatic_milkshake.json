@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "# #",
+    " M ",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:spider_eys"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "mott:aromatic_milkshake",
+    "count": 16
+  }
+}

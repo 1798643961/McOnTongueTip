@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import com.mott.listener.EntityListener;
 import net.minecraft.client.render.RenderLayer;
 
+import static com.mott.listener.BlockListener.*;
 import static com.mott.listener.CropListener.*;
 
 public class ClientRegistry {
@@ -21,7 +22,9 @@ public class ClientRegistry {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RICE_CROP);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TOMATO_CROP);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), GREEN_TEA_CROP);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BERRY_CROP);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BERRY_CROP.getDefaultState().getBlock());
+        BlockRenderLayerMap.INSTANCE.putBlock(JAR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(COW_JAR, RenderLayer.getCutout());
         EntityRendererRegistry.register(EntityListener.FUTA_COW, (context) -> {return new FutaCowEntityRenderer(context);});
         EntityRendererRegistry.register(EntityListener.MOON_SLIME, (context) -> {return new MoonSlimeEntityRenderer(context);});
         EntityRendererRegistry.register(EntityListener.WATER_SLIME, (context) -> {return new WaterSlimeEntityRenderer(context);});
