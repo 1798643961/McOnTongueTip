@@ -1,0 +1,12 @@
+{ 
+  "death" :  {
+    "sounds" :  [ 
+      "mott:death"
+    ] 
+  },
+  "giegie": {
+    "sounds": [
+      "mott:giegie"
+    ]
+  }
+}

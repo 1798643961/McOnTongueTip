@@ -25,6 +25,7 @@ public class ItemRegistry {
         initItem("jungle_slime_ball", JUNGLE_SLIME_BALL);
         initItem("jungle_slime_gel", JUNGLE_SLIME_GEL);
         initItem("jungle_slime_spawn_egg", JUNGLE_SLIME_SPAWN_EGG);
+        initItem("green_tea_crystal", GREEN_TEA_CRYSTAl);
     }
 
     private static void initItem(String path, Item item) {

@@ -1,6 +1,7 @@
 package com.mott.listener;
 
 import com.mott.entity.FutaCowEntity;
+import com.mott.entity.block.SitToiletEntity;
 import com.mott.entity.slime.JungleSlimeEntity;
 import com.mott.entity.slime.MoonSlimeEntity;
 import com.mott.entity.slime.WaterSlimeEntity;
@@ -18,6 +19,7 @@ public class EntityListener {
     public static final EntityType MOON_SLIME = initEntityType("moon_slime", MoonSlimeEntity::new, 0.51f, 0.51f);
     public static final EntityType WATER_SLIME = initEntityType("water_slime", WaterSlimeEntity::new, 0.51f, 0.51f);
     public static final EntityType JUNGLE_SLIME = initEntityType("jungle_slime", JungleSlimeEntity::new, 0.51f, 0.51f);
+    public static final EntityType<SitToiletEntity> SIT_TOILET_ENTITY_TYPE = initEntityType("sit_toilet_entity", SitToiletEntity::new, 0.001F, 0.001F);
 
     private static EntityType initEntityType(String path, EntityType.EntityFactory factory, float width, float height) {
         return Registry.register(

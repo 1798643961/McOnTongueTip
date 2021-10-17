@@ -1,9 +1,6 @@
 package com.mott.registry;
 
-import com.mott.entity.renderer.FutaCowEntityRenderer;
-import com.mott.entity.renderer.JungleSlimeEntityRenderer;
-import com.mott.entity.renderer.MoonSlimeEntityRenderer;
-import com.mott.entity.renderer.WaterSlimeEntityRenderer;
+import com.mott.entity.renderer.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -29,5 +26,6 @@ public class ClientRegistry {
         EntityRendererRegistry.register(EntityListener.MOON_SLIME, (context) -> {return new MoonSlimeEntityRenderer(context);});
         EntityRendererRegistry.register(EntityListener.WATER_SLIME, (context) -> {return new WaterSlimeEntityRenderer(context);});
         EntityRendererRegistry.register(EntityListener.JUNGLE_SLIME, (context) -> {return new JungleSlimeEntityRenderer(context);});
+        EntityRendererRegistry.register(EntityListener.SIT_TOILET_ENTITY_TYPE, SitToiletRenderer::new);
     }
 }

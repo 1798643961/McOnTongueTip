@@ -14,6 +14,7 @@ public class BlockRegistry {
     public static void registerBlocks() {
         initBlock("jar", JAR);
         initBlock("cow_jar", COW_JAR);
+        initBlock("toilet_block", TOILET_BLOCK);
     }
 
     private static void initBlock(String path, Block block) {

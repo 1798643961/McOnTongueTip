@@ -17,6 +17,7 @@
   "icon": "assets/mott/icon.png",
 
   "environment": "*",
+  "accessWidener": "mott.aw",
   "entrypoints": {
     "main": [
       "com.mott.ModMain"

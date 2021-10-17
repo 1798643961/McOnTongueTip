@@ -11,12 +11,14 @@ public class ModMain implements ModInitializer{
     @Override
     public void onInitialize() {
         ItemRegistry.registerItems();
-        EntityRegistry.registerEntities();
         FoodRegistry.registerFood();
         CropRegistry.registerCrop();
         BlockRegistry.registerBlocks();
+        EntityRegistry.registerEntities();
         LootTableRegistry.registerLootTable();
         WorldGenRgeistry.registerWorldGen();
+        EventRegistry.reigsterEvent();
+        SoundEventRegistry.registerSoundEvents();
         new Configuration(ModConfig.class, Reference.MODID);
     }
 }

@@ -11,7 +11,10 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-
+	maven {
+		name = "maven"
+		url = "https://mvnrepository.com/"
+	}
 }
 
 dependencies {
@@ -20,6 +23,9 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation "org.javassist:javassist:3.28.0-GA"
+	include "org.javassist:javassist:3.28.0-GA"
 }
 
 processResources {
@@ -38,6 +44,10 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
 	withSourcesJar()
+}
+
+minecraft {
+	accessWidener = file("src/main/resources/mott.aw")
 }
 
 jar {

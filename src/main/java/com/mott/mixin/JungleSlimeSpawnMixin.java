@@ -16,7 +16,8 @@ public class JungleSlimeSpawnMixin {
     @Inject(method = "addJungleMobs", at =@At("RETURN"))
     private static void addJungleSlimeSpawn(SpawnSettings.Builder builder, CallbackInfo ci) {
         if (ModConfig.jungleSlimeSpawn) {
-            builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.JUNGLE_SLIME, 100, 1, 6));
+            builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityListener.JUNGLE_SLIME, 100, 1, 10));
         }
     }
+
 }
